@@ -2,8 +2,7 @@
 
 `vehicle-maintenance-planner` is a local-first toolkit for explaining manufacturer
 maintenance codes, planning service, gathering comparable written quotes, auditing
-invoices, and deciding whether another trip is worth the likely savings. The initial
-catalog targets the U.S. 2024 Honda CR-V Sport-L Hybrid AWD.
+invoices, and deciding whether another trip is worth the likely savings.
 
 > **Important:** This software is not mechanical, legal, or safety advice. Confirm
 > safety-critical questions with a qualified professional and current primary sources.
