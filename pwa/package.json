@@ -36,7 +36,7 @@
     "eslint-plugin-react-hooks": "7.0.1",
     "eslint-plugin-react-refresh": "0.5.2",
     "jsdom": "28.0.0",
-    "slopless": "0.2.35",
+    "slopless": "0.2.36",
     "typescript": "5.9.3",
     "typescript-eslint": "8.59.3",
     "vite": "7.3.6",
