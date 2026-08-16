@@ -1,0 +1,90 @@
+{
+  "catalog_version": "2026-08-15",
+  "rules": [
+    {
+      "code": "A",
+      "title": "Replace engine oil",
+      "summary": "Replace the engine oil when the vehicle displays the main code.",
+      "market": "US",
+      "model_applicability": "2024 Honda CR-V Sport-L Hybrid AWD",
+      "source_url": "https://techinfo.honda.com/rjanisis/pubs/om/ah/a3d42424iom/enu/details/131229047-12935.html",
+      "retrieved_date": "2026-08-15",
+      "time_fallback_months": 12,
+      "time_fallback_note": "If the message does not appear within 12 months after reset, replace the oil annually."
+    },
+    {
+      "code": "B",
+      "title": "Replace oil and filter; inspect vehicle",
+      "summary": "Replace engine oil and filter and complete the manufacturer-listed inspections.",
+      "market": "US",
+      "model_applicability": "2024 Honda CR-V Sport-L Hybrid AWD",
+      "source_url": "https://techinfo.honda.com/rjanisis/pubs/om/ah/a3d42424iom/enu/details/131229047-12935.html",
+      "retrieved_date": "2026-08-15"
+    },
+    {
+      "code": "1",
+      "title": "Rotate tires",
+      "summary": "Rotate the tires and check inflation and condition.",
+      "market": "US",
+      "model_applicability": "2024 Honda CR-V Sport-L Hybrid AWD",
+      "source_url": "https://techinfo.honda.com/rjanisis/pubs/om/ah/a3d42424iom/enu/details/131229047-12935.html",
+      "retrieved_date": "2026-08-15"
+    },
+    {
+      "code": "2",
+      "title": "Replace intake and cabin filters",
+      "summary": "Replace the engine air-cleaner element and dust/pollen filter and inspect the drive belt.",
+      "market": "US",
+      "model_applicability": "2024 Honda CR-V Sport-L Hybrid AWD",
+      "source_url": "https://techinfo.honda.com/rjanisis/pubs/om/ah/a3d42424iom/enu/details/131229047-12935.html",
+      "retrieved_date": "2026-08-15"
+    },
+    {
+      "code": "3",
+      "title": "Replace transmission fluid",
+      "summary": "Replace the transmission fluid when this sub-code appears.",
+      "market": "US",
+      "model_applicability": "2024 Honda CR-V Sport-L Hybrid AWD",
+      "source_url": "https://techinfo.honda.com/rjanisis/pubs/om/ah/a3d42424iom/enu/details/131229047-12935.html",
+      "retrieved_date": "2026-08-15"
+    },
+    {
+      "code": "4",
+      "title": "Replace spark plugs; inspect valve clearance",
+      "summary": "Replace spark plugs and inspect valve clearance when this sub-code appears.",
+      "market": "US",
+      "model_applicability": "2024 Honda CR-V Sport-L Hybrid AWD",
+      "source_url": "https://techinfo.honda.com/rjanisis/pubs/om/ah/a3d42424iom/enu/details/131229047-12935.html",
+      "retrieved_date": "2026-08-15"
+    },
+    {
+      "code": "5",
+      "title": "Replace engine coolant",
+      "summary": "Replace engine coolant when this sub-code appears.",
+      "market": "US",
+      "model_applicability": "2024 Honda CR-V Sport-L Hybrid AWD",
+      "source_url": "https://techinfo.honda.com/rjanisis/pubs/om/ah/a3d42424iom/enu/details/131229047-12935.html",
+      "retrieved_date": "2026-08-15"
+    },
+    {
+      "code": "6",
+      "title": "Replace rear differential fluid",
+      "summary": "Replace rear differential fluid on applicable AWD vehicles when this sub-code appears.",
+      "market": "US",
+      "model_applicability": "2024 Honda CR-V Sport-L Hybrid AWD",
+      "source_url": "https://techinfo.honda.com/rjanisis/pubs/om/ah/a3d42424iom/enu/details/131229047-12935.html",
+      "retrieved_date": "2026-08-15"
+    },
+    {
+      "code": "7",
+      "title": "Replace brake fluid",
+      "summary": "Replace brake fluid when this sub-code appears.",
+      "market": "US",
+      "model_applicability": "2024 Honda CR-V Sport-L Hybrid AWD",
+      "source_url": "https://techinfo.honda.com/rjanisis/pubs/om/ah/a3d42424iom/enu/details/131229047-12935.html",
+      "retrieved_date": "2026-08-15",
+      "time_fallback_months": 36,
+      "time_fallback_note": "If the message does not appear, Honda specifies replacement every three years."
+    }
+  ]
+}

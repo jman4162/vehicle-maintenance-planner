@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Vehicle Maintenance Planner">
+  <rect width="512" height="512" rx="112" fill="#163c3a"/>
+  <path d="M113 302h286l-30-91c-9-28-35-47-65-47h-96c-30 0-56 19-65 47l-30 91Z" fill="#f4f0e6"/>
+  <path d="M96 298c0-18 15-33 33-33h254c18 0 33 15 33 33v60c0 15-12 27-27 27h-20v-24H143v24h-20c-15 0-27-12-27-27v-60Z" fill="#dc6f45"/>
+  <circle cx="157" cy="319" r="22" fill="#163c3a"/>
+  <circle cx="355" cy="319" r="22" fill="#163c3a"/>
+  <path d="M231 214h50v24h-50z" fill="#163c3a"/>
+</svg>

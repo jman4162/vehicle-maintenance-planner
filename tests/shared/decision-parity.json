@@ -1,0 +1,49 @@
+{
+  "break_even": {
+    "dealer_cents": 32801,
+    "alternative_cents": 16000,
+    "expected_savings_cents": 16801,
+    "expected_hours": {"$50/hour": 3.36, "$100/hour": 1.68, "$150/hour": 1.12}
+  },
+  "quotes": [
+    {
+      "id": "quote-dealer-a",
+      "shop_id": "dealer-a",
+      "plan_id": "plan-a67",
+      "received_at": "2026-08-15",
+      "out_the_door_cents": 32801,
+      "warranty_score": 1.0,
+      "travel_minutes": 15,
+      "completeness_score": 1.0,
+      "honda_hybrid_experience": 1.0,
+      "comparable_scope": true,
+      "written": true
+    },
+    {
+      "id": "quote-specialist-a",
+      "shop_id": "specialist-a",
+      "plan_id": "plan-a67",
+      "received_at": "2026-08-14",
+      "out_the_door_cents": 16000,
+      "warranty_score": 0.8,
+      "travel_minutes": 35,
+      "completeness_score": 0.9,
+      "honda_hybrid_experience": 0.9,
+      "comparable_scope": true,
+      "written": true
+    },
+    {
+      "id": "quote-specialist-b",
+      "shop_id": "specialist-b",
+      "plan_id": "plan-a67",
+      "received_at": "2026-08-13",
+      "out_the_door_cents": 19000,
+      "warranty_score": 0.9,
+      "travel_minutes": 25,
+      "completeness_score": 1.0,
+      "honda_hybrid_experience": 0.85,
+      "comparable_scope": true,
+      "written": true
+    }
+  ]
+}

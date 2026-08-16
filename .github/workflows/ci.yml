@@ -1,0 +1,96 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv python install 3.12
+      - run: uv sync --extra dev --locked
+      - run: uv run ruff check .
+      - run: uv run ruff format --check src tests
+      - run: uv run pytest
+      - run: uv run pip-audit --local --progress-spinner off
+      - run: uv build
+      - run: uv run vehicle-maint privacy audit . --json
+      - run: uv run cyclonedx-py environment --pyproject pyproject.toml --output-reproducible --output-format JSON --output-file python-sbom.json .venv
+      - run: sha256sum dist/* python-sbom.json > SHA256SUMS.python
+      - uses: actions/upload-artifact@v4
+        with:
+          name: python-distributions-and-sbom
+          path: |
+            dist/*
+            python-sbom.json
+            SHA256SUMS.python
+
+  pwa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: pwa/package-lock.json
+      - run: npm ci
+        working-directory: pwa
+      - run: npm run lint
+        working-directory: pwa
+      - run: npm test
+        working-directory: pwa
+      - run: npm audit --audit-level=high
+        working-directory: pwa
+      - run: npm run build
+        working-directory: pwa
+      - run: npm run test:offline
+        working-directory: pwa
+      - run: tar -C dist -czf vehicle-maintenance-planner-pwa.tar.gz .
+        working-directory: pwa
+      - run: npm sbom --package-lock-only --sbom-format cyclonedx --sbom-type application > pwa-sbom.json
+        working-directory: pwa
+      - run: sha256sum vehicle-maintenance-planner-pwa.tar.gz pwa-sbom.json > SHA256SUMS.pwa
+        working-directory: pwa
+      - uses: actions/upload-artifact@v4
+        with:
+          name: static-pwa-and-sbom
+          path: |
+            pwa/dist/**
+            pwa/pwa-sbom.json
+            pwa/vehicle-maintenance-planner-pwa.tar.gz
+            pwa/SHA256SUMS.pwa
+
+  prose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - run: uv python install 3.12
+      - run: uv sync --extra dev --locked
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: pwa/package-lock.json
+      - run: npm ci
+        working-directory: pwa
+      - run: ./scripts/prose-lint.sh
+
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v2

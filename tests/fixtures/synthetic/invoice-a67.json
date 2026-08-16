@@ -1,0 +1,17 @@
+{
+  "synthetic": true,
+  "line_items": [
+    {"description": "Engine oil service", "total_cents": 10036},
+    {"description": "Rear differential fluid service", "total_cents": 10204},
+    {"description": "Brake fluid service", "total_cents": 32801},
+    {"description": "Shop supplies and tax", "total_cents": 7480}
+  ],
+  "summary": {
+    "labor_cents": 40739,
+    "parts_cents": 11751,
+    "shop_supplies_cents": 1630,
+    "hazmat_cents": 551,
+    "tax_cents": 5850
+  },
+  "total_cents": 60521
+}

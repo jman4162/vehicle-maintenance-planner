@@ -1,0 +1,14 @@
+{
+  "synthetic": true,
+  "passphrase_for_test_only": "synthetic interop passphrase",
+  "envelope": {
+    "version": 1,
+    "algorithm": "AES-GCM",
+    "kdf": "PBKDF2-SHA-256",
+    "iterations": 250000,
+    "salt": "ra0rsEfLZLYHWGToaUvWyg==",
+    "iv": "1Vzu0NbbIkiMgznp",
+    "ciphertext": "IwVtCSdKdrsbvsV0ThlRxhOMSGuCkqIm3Iu6eXo8yDie55yGEK7yvlwy4VWieucuS/Z+ywcMKNqTlcrkqAN9/eIEevalVFAaFCibsw=="
+  },
+  "expected": {"schema_version": 1, "producer": "python", "total_cents": 60521}
+}

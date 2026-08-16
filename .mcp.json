@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "vehicle-maint": {
+      "type": "stdio",
+      "command": "uv",
+      "args": ["run", "vehicle-maint", "mcp"],
+      "env": {"PYTHONPATH": "src"}
+    }
+  }
+}
