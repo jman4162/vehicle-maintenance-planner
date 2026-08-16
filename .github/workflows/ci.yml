@@ -25,7 +25,7 @@ jobs:
       - run: uv run vehicle-maint privacy audit . --json
       - run: uv run cyclonedx-py environment --pyproject pyproject.toml --output-reproducible --output-format JSON --output-file python-sbom.json .venv
       - run: sha256sum dist/* python-sbom.json > SHA256SUMS.python
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: python-distributions-and-sbom
           path: |
@@ -60,7 +60,7 @@ jobs:
         working-directory: pwa
       - run: sha256sum vehicle-maintenance-planner-pwa.tar.gz pwa-sbom.json > SHA256SUMS.pwa
         working-directory: pwa
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: static-pwa-and-sbom
           path: |
